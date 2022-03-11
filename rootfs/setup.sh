@@ -8,7 +8,7 @@ lsblk && read -p "Where is '/' mounted at? (e.g. /dev/sda1): " root_device
 if [ ! -z "${root_device}" ]; then
     for f in /boot/loader/entries/*.conf; do
         sed "s/PARTUUID=<enter_partuuid_here>/PARTUUID=`blkid -s PARTUUID -o value ${root_device}`/g" \
-        -i ${f}
+        -i "${f}"
     done
 else
     echo "Error: no root device specified"
@@ -30,9 +30,13 @@ done
 sudo cp -v "rootfs/etc/environment" "/etc/"
 
 read -p "Specify your username (e.g. foo): " username
+
+cp -v "rootfs/home/${username}/.config/modprobed.db" "/home/${username}"
+
 [ ! -z "${username}" ] && chsh -s /bin/zsh ${username}
 
-[ ! -f "${HOME}/.zshrc" ] && echo "The file '${HOME}/.zshrc' does not exist"
+[ ! -f "/home/${username}/.zshrc" ] && echo "The file
+'/home/${username}/.zshrc' does not exist"
 
 printf "source /etc/profile
 source /etc/environment
