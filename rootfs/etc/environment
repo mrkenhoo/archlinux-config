@@ -1,0 +1,4 @@
+EDITOR=vim
+QT_QPA_PLATFORM=xcb
+QT_QPA_PLATFORMTHEME=qt5ct
+QT_PLUGIN_PATH=/usr/lib/qt/plugins
