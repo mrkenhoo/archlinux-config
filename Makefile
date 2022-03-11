@@ -1,5 +1,10 @@
 all: install-kernels
-		systemctl enable --now {apparmor,ananicy,firewalld}
+		systemctl enable --now apparmor && \
+		systemctl enable --now firewalld && \
+		systemctl enable --now bluetooth && \
+		systemctl enable --now libvirtd.socket && \
+		systemctl enable --now libvirtd-ro.socket && \
+		systemctl enable --now libvirtd-admin.socket
 
 install-kernels: setup-rootfs
 		[ -f "kernels/setup.sh" ] && sudo sh "kernels/setup.sh"
