@@ -80,6 +80,7 @@ chromium
 cifs-utils
 clucene
 cmatrix
+containerd
 convertlit
 coreutils
 cpio
@@ -97,10 +98,15 @@ desktop-file-utils
 device-mapper
 dialog
 diffutils
+dmg2img
 dmidecode
 dmraid
 dnsmasq
 dnssec-anchors
+docbook-xml
+docbook-xsl
+docker
+docker-compose
 dolphin
 dosfstools
 double-conversion
@@ -150,11 +156,13 @@ gcab
 gcc
 gcc-libs
 gcr
+gd
 gdbm
 gdk-pixbuf2
 geoclue
 geocode-glib
 gettext
+ghostscript
 giflib
 git
 github-desktop-bin
@@ -178,6 +186,7 @@ gpm
 gptfdisk
 graphene
 graphite
+graphviz
 grep
 groff
 gsettings-desktop-schemas
@@ -199,6 +208,7 @@ gtk2
 gtk3
 gtkmm3
 gtksourceview4
+gts
 guile
 gupnp
 gupnp-igd
@@ -215,6 +225,7 @@ hwloc
 hyphen
 iana-etc
 icu
+ijs
 imagemagick
 imath
 imlib2
@@ -231,6 +242,7 @@ jansson
 jasper
 java-environment-common
 java-runtime-common
+jbig2dec
 jdk-openjdk
 jemalloc
 jre-openjdk
@@ -361,6 +373,7 @@ lib32-libglvnd
 lib32-libgpg-error
 lib32-libice
 lib32-libidn
+lib32-libidn11
 lib32-libidn2
 lib32-libjpeg-turbo
 lib32-libldap
@@ -370,6 +383,7 @@ lib32-libpcap
 lib32-libpciaccess
 lib32-libpng
 lib32-libpsl
+lib32-librtmp0
 lib32-libsm
 lib32-libsndfile
 lib32-libssh2
@@ -381,6 +395,7 @@ lib32-libunwind
 lib32-libva
 lib32-libva-intel-driver
 lib32-libvorbis
+lib32-libwebp
 lib32-libx11
 lib32-libxau
 lib32-libxcb
@@ -416,6 +431,7 @@ lib32-pipewire-jack
 lib32-pipewire-v4l2
 lib32-readline
 lib32-sdl2
+lib32-sdl2_image
 lib32-sqlite
 lib32-systemd
 lib32-util-linux
@@ -439,6 +455,7 @@ libasyncns
 libatasmart
 libatomic_ops
 libavc1394
+libavif
 libavtp
 libayatana-appindicator
 libayatana-indicator
@@ -505,6 +522,7 @@ libical
 libice
 libid3tag
 libidn
+libidn11
 libidn2
 libiec61883
 libimagequant
@@ -569,6 +587,7 @@ liborcus
 libosinfo
 libp11-kit
 libpagemaker
+libpaper
 libpcap
 libpciaccess
 libpgm
@@ -680,6 +699,7 @@ libxv
 libxvmc
 libxxf86vm
 libyaml
+libyuv
 libzip
 libzmf
 licenses
@@ -690,8 +710,8 @@ linux-firmware
 linux-firmware-whence
 linux-hardened
 linux-hardened-headers
-linux-tkg
-linux-tkg-headers
+linux-lts
+linux-lts-headers
 linux-zen
 linux-zen-headers
 llvm-libs
@@ -711,6 +731,8 @@ lzo
 m4
 mailcap
 make
+mariadb-clients
+mariadb-libs
 md4c
 mdadm
 media-player-info
@@ -738,6 +760,7 @@ ncurses5-compat-libs
 ndctl
 neofetch
 neon
+netpbm
 nettle
 networkmanager
 networkmanager-qt
@@ -774,6 +797,7 @@ pangomm
 papirus-icon-theme
 parted
 patch
+patchutils
 pciutils
 pcre
 pcre2
@@ -825,26 +849,43 @@ pugixml
 pulseaudio-qt
 python
 python-appdirs
+python-babel
 python-cairo
 python-chardet
 python-distro
 python-dnspython
+python-docutils
 python-evdev
 python-gobject
 python-idna
+python-imagesize
 python-importlib-metadata
+python-jinja
 python-lxml
 python-markdown
+python-markupsafe
 python-more-itertools
 python-ordered-set
 python-packaging
 python-pillow
+python-pygments
 python-pyparsing
 python-pyqt5
 python-pyqt5-sip
+python-pytz
 python-requests
 python-setuptools
 python-six
+python-snowballstemmer
+python-sphinx
+python-sphinx-alabaster-theme
+python-sphinx_rtd_theme
+python-sphinxcontrib-applehelp
+python-sphinxcontrib-devhelp
+python-sphinxcontrib-htmlhelp
+python-sphinxcontrib-jsmath
+python-sphinxcontrib-qthelp
+python-sphinxcontrib-serializinghtml
 python-urllib3
 python-yaml
 python-zipp
@@ -894,6 +935,7 @@ rsync
 rtmpdump
 rubberband
 run-parts
+runc
 sbc
 schedtool
 scrcpy
@@ -947,6 +989,7 @@ systemsettings
 taglib
 talloc
 tar
+tcl
 tdb
 telegram-desktop
 tevent
@@ -954,6 +997,7 @@ texinfo
 thin-provisioning-tools
 threadweaver
 thunderbird
+tk
 tpm2-tss
 tracker3
 transmission-cli
@@ -1035,6 +1079,7 @@ xf86-video-intel
 xfsprogs
 xkeyboard-config
 xmlsec
+xmlto
 xorg-fonts-encodings
 xorg-fonts-type1
 xorg-server
