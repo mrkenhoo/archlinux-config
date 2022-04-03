@@ -16,5 +16,8 @@ install-packages: install-arch
 		[ -f "packages/setup.sh" ] && sh "packages/setup.sh"
 
 install-arch:
+		[ ! -d "tools" ] && mkdir -v "tools"
 		git submodule init
+		git config submodule.https://github.com/MatMoul/archfi.git tools/archfi
+		git submodule update
 		sh tools/archfi
