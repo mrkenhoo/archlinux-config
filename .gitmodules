@@ -1,3 +1,3 @@
 [submodule "tools/archfi"]
 	path = tools/archfi
-	url = https://github.com/MatMoul/archfi
+	url = https://github.com/MatMoul/archfi.git
