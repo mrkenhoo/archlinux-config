@@ -12,5 +12,9 @@ install-kernels: setup-rootfs
 setup-rootfs: install-packages
 		[ -f "rootfs/setup.sh" ] && sudo sh "rootfs/setup.sh"
 
-install-packages:
+install-packages: install-arch
 		[ -f "packages/setup.sh" ] && sh "packages/setup.sh"
+
+install-arch:
+		git submodule init
+		sh tools/archfi
