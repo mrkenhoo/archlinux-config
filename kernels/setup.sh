@@ -5,4 +5,7 @@
     cp -v "kernels/customization.cfg" "kernels/linux-tkg/customization.cfg" && \
     cd "kernels/linux-tkg" && makepkg -csi --needed && cd "../.." || \
     cp -v "kernels/customization.cfg" "kernels/linux-tkg/customization.cfg" && \
-    cd "kernels/linux-tkg" && makepkg -csi --needed && cd "../.."
+    cd "kernels/linux-tkg" && \
+    sh update-kernel-versions.sh && \
+    makepkg -csi --needed && \
+    cd ../..
