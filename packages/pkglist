@@ -1,6 +1,7 @@
 a52dec
 aalib
 abseil-cpp
+accounts-qml-module
 accountsservice
 acl
 adobe-source-code-pro-fonts
@@ -39,6 +40,7 @@ autoconf
 automake
 avahi
 ayatana-ido
+babl
 baloo
 baloo-widgets
 base
@@ -50,6 +52,7 @@ binutils
 birdtray
 bison
 bitwarden
+blas
 bluedevil
 bluez
 bluez-libs
@@ -103,8 +106,6 @@ dmidecode
 dmraid
 dnsmasq
 dnssec-anchors
-docbook-xml
-docbook-xsl
 docker
 docker-compose
 dolphin
@@ -134,7 +135,6 @@ file
 filesystem
 findutils
 firefox
-firestorm-bin
 firewalld
 flac
 flatbuffers
@@ -159,11 +159,13 @@ gcr
 gd
 gdbm
 gdk-pixbuf2
+gegl
 geoclue
 geocode-glib
 gettext
 ghostscript
 giflib
+gimp
 git
 github-desktop-bin
 glew
@@ -232,6 +234,7 @@ imlib2
 inetutils
 iniparser
 intel-gmmlib
+intel-hybrid-codec-driver
 intel-media-driver
 intel-ucode
 iproute2
@@ -263,6 +266,7 @@ kbookmarks
 kcalendarcore
 kcmutils
 kcodecs
+kcolorpicker
 kcompletion
 kconfig
 kconfigwidgets
@@ -291,6 +295,7 @@ kholidays
 ki18n
 kiconthemes
 kidletime
+kimageannotator
 kio
 kio-extras
 kio-fuse
@@ -332,10 +337,12 @@ kwindowsystem
 kxmlgui
 l-smash
 lame
+lapack
 layer-shell-qt
 lcms2
 ldb
 ldns
+lensfun
 less
 lib32-acl
 lib32-alsa-lib
@@ -348,7 +355,6 @@ lib32-dbus
 lib32-e2fsprogs
 lib32-expat
 lib32-faudio
-lib32-flac
 lib32-fontconfig
 lib32-freetype2
 lib32-gamemode
@@ -372,7 +378,6 @@ lib32-libgcrypt
 lib32-libglvnd
 lib32-libgpg-error
 lib32-libice
-lib32-libidn
 lib32-libidn11
 lib32-libidn2
 lib32-libjpeg-turbo
@@ -385,7 +390,6 @@ lib32-libpng
 lib32-libpsl
 lib32-librtmp0
 lib32-libsm
-lib32-libsndfile
 lib32-libssh2
 lib32-libtasn1
 lib32-libtiff
@@ -394,7 +398,8 @@ lib32-libunistring
 lib32-libunwind
 lib32-libva
 lib32-libva-intel-driver
-lib32-libvorbis
+lib32-libva-vdpau-driver
+lib32-libvdpau
 lib32-libwebp
 lib32-libx11
 lib32-libxau
@@ -422,7 +427,6 @@ lib32-nspr
 lib32-nss
 lib32-openal
 lib32-openssl
-lib32-opus
 lib32-p11-kit
 lib32-pam
 lib32-pcre
@@ -478,6 +482,7 @@ libcdio
 libcdio-paranoia
 libcdr
 libcloudproviders
+libcmrt
 libcolord
 libcups
 libdaemon
@@ -502,6 +507,7 @@ libepubgen
 libetonyek
 libevdev
 libevent
+libexif
 libexttextcat
 libfakekey
 libfdk-aac
@@ -510,6 +516,7 @@ libfontenc
 libfreeaptx
 libfreehand
 libgcrypt
+libgexiv2
 libglvnd
 libgme
 libgpg-error
@@ -538,6 +545,7 @@ libixion
 libjpeg-turbo
 libkate
 libkgapi
+libkipi
 libksba
 libkscreen
 libksysguard
@@ -563,6 +571,7 @@ libmpeg2
 libmspub
 libmtp
 libmwaw
+libmypaint
 libnatpmp
 libndp
 libnet
@@ -604,6 +613,7 @@ libqmi
 libqrtr-glib
 libqxp
 libraqm
+libraw
 libraw1394
 libreoffice-fresh
 librevenge
@@ -622,6 +632,7 @@ libsodium
 libsoup
 libsoup3
 libsoxr
+libspiro
 libsrtp
 libssh
 libssh2
@@ -645,7 +656,7 @@ libusb
 libusbmuxd
 libutempter
 libva
-libva-intel-driver
+libva-intel-driver-hybrid
 libvdpau
 libvdpau-va-gl
 libvirt
@@ -658,6 +669,7 @@ libvorbis
 libvpx
 libwacom
 libwebp
+libwmf
 libwpd
 libwpe
 libwpg
@@ -668,7 +680,6 @@ libxaw
 libxcb
 libxcomposite
 libxcrypt
-libxcrypt-compat
 libxcursor
 libxcvt
 libxdamage
@@ -712,6 +723,8 @@ linux-hardened
 linux-hardened-headers
 linux-lts
 linux-lts-headers
+linux-tkg
+linux-tkg-headers
 linux-zen
 linux-zen-headers
 llvm-libs
@@ -738,6 +751,7 @@ mdadm
 media-player-info
 mesa
 mesa-utils
+metis
 milou
 miniupnpc
 minizip
@@ -754,6 +768,7 @@ mpv
 mtdev
 mujs
 mymc
+mypaint-brushes1
 ncompress
 ncurses
 ncurses5-compat-libs
@@ -797,7 +812,6 @@ pangomm
 papirus-icon-theme
 parted
 patch
-patchutils
 pciutils
 pcre
 pcre2
@@ -830,6 +844,8 @@ polkit
 polkit-kde-agent
 polkit-qt5
 poppler
+poppler-data
+poppler-glib
 poppler-qt5
 popt
 portaudio
@@ -847,45 +863,29 @@ psensor
 psmisc
 pugixml
 pulseaudio-qt
+purpose
 python
 python-appdirs
-python-babel
 python-cairo
 python-chardet
 python-distro
 python-dnspython
-python-docutils
 python-evdev
 python-gobject
 python-idna
-python-imagesize
 python-importlib-metadata
-python-jinja
 python-lxml
 python-markdown
-python-markupsafe
 python-more-itertools
 python-ordered-set
 python-packaging
 python-pillow
-python-pygments
 python-pyparsing
 python-pyqt5
 python-pyqt5-sip
-python-pytz
 python-requests
 python-setuptools
 python-six
-python-snowballstemmer
-python-sphinx
-python-sphinx-alabaster-theme
-python-sphinx_rtd_theme
-python-sphinxcontrib-applehelp
-python-sphinxcontrib-devhelp
-python-sphinxcontrib-htmlhelp
-python-sphinxcontrib-jsmath
-python-sphinxcontrib-qthelp
-python-sphinxcontrib-serializinghtml
 python-urllib3
 python-yaml
 python-zipp
@@ -905,6 +905,7 @@ qt5-quickcontrols2
 qt5-sensors
 qt5-speech
 qt5-svg
+qt5-tools
 qt5-translations
 qt5-wayland
 qt5-webchannel
@@ -918,7 +919,7 @@ qt6-imageformats
 qt6-svg
 qt6-translations
 qt6-wayland
-rapidyaml
+rapidyaml-git
 raptor
 rasqal
 rav1e
@@ -932,6 +933,7 @@ rest
 rnnoise
 rpcs3-bin
 rsync
+rtkit
 rtmpdump
 rubberband
 run-parts
@@ -964,6 +966,7 @@ sord
 sound-theme-freedesktop
 soundtouch
 spandsp
+spectacle
 speex
 speexdsp
 spice
@@ -976,6 +979,7 @@ srt
 sshfs
 steam
 sudo
+suitesparse
 svt-av1
 svt-hevc
 swtpm
@@ -1079,7 +1083,6 @@ xf86-video-intel
 xfsprogs
 xkeyboard-config
 xmlsec
-xmlto
 xorg-fonts-encodings
 xorg-fonts-type1
 xorg-server
