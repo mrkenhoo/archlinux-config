@@ -1,0 +1,4 @@
+kernels/linux-tkg
+packages/yay
+packages/proton-ge-custom-updater/*
+!packages/proton-ge-custom-updater/PKGBUILD
