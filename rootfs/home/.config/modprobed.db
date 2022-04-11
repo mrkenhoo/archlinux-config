@@ -28,6 +28,8 @@ cryptd
 crypto_simd
 crypto_user
 drm
+drm_buddy
+drm_dp_helper
 drm_kms_helper
 ecdh_generic
 ee1004
