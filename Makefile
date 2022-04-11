@@ -21,3 +21,9 @@ install-arch:
 		git config submodule.https://github.com/MatMoul/archfi.git tools/archfi && \
 		git submodule update && \
 		sh tools/archfi/archfi
+
+check:
+	[ -d "kernels" ] && echo "Directory kernels was found" && \
+	[ -d "packages" ] && echo "Directory packages was found" && \
+	[ -d "rootfs" ] && echo "Directory rootfs was found" && \
+	[ -d "tools" ] && echo "Directory tools was found" || exit 1
