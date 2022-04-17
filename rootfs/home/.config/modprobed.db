@@ -16,6 +16,7 @@ btintel
 btmtk
 btrtl
 btusb
+cdrom
 cec
 cmac
 coretemp
@@ -74,6 +75,7 @@ iptable_nat
 iptable_raw
 iptable_security
 irqbypass
+isofs
 jbd2
 joydev
 kvm
@@ -83,6 +85,7 @@ ledtrig_audio
 libcrc32c
 libphy
 llc
+loop
 mac_hid
 macvlan
 macvtap
@@ -114,6 +117,7 @@ nft_fib_ipv6
 nft_objref
 nft_reject
 nft_reject_inet
+ntfs3
 overlay
 pcspkr
 platform_profile
