@@ -732,8 +732,6 @@ linux-hardened
 linux-hardened-headers
 linux-lts
 linux-lts-headers
-linux-tkg
-linux-tkg-headers
 linux-zen
 linux-zen-headers
 llvm-libs
