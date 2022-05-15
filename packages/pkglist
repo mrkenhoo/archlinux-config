@@ -611,7 +611,6 @@ lzo
 m4
 mailcap
 make
-mariadb-clients
 md4c
 mdadm
 media-player-info
@@ -721,7 +720,7 @@ python-urllib3
 python-yaml
 python-zipp
 qca-qt5
-qemu
+qemu-desktop
 qqc2-desktop-style
 qrencode
 qt5-base
@@ -765,7 +764,7 @@ schedtool
 scrcpy
 sddm
 sddm-kcm
-sdl
+sdl12-compat
 sdl2
 sdl2_image
 sdl_ttf
