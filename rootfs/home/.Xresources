@@ -1,0 +1,14 @@
+XTerm.vt100.locale: true
+XTerm.vt100.metasendsEscape: true
+XTerm.vt100.backarrowKey: false
+XTerm.vt100.scrollBar: false
+XTerm.vt100.geometry: 80x24
+
+XTerm.vt100.faceName: MesloLGS NF:size=11:antialias=true
+XTerm.vt100.font: 7x13
+
+*background: rgb:00/00/00
+*foreground: rgb:00/FF/00
+
+XTerm.ttyModes: erase ^?
+
