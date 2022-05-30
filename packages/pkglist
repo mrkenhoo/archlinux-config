@@ -66,6 +66,8 @@ cdparanoia
 chromaprint
 chromium
 cifs-utils
+clamtk
+cloudflare-warp-bin
 clucene
 cmatrix
 convertlit
@@ -104,10 +106,12 @@ exiv2
 faac
 faad2
 fakeroot
+fancontrol-kcm
 faudio
 ffmpeg
 ffmpeg4.4
 firefox
+firestorm-bin
 firewalld
 flac
 flatbuffers
@@ -180,7 +184,6 @@ imlib2
 inetutils
 iniparser
 intel-gmmlib
-intel-hybrid-codec-driver
 intel-media-driver
 intel-ucode
 iotop
@@ -201,7 +204,6 @@ kactivities
 kactivities-stats
 kactivitymanagerd
 karchive
-kate
 kauth
 kbookmarks
 kcalendarcore
@@ -234,6 +236,7 @@ kholidays
 ki18n
 kiconthemes
 kidletime
+kinfocenter
 kio
 kio-extras
 kio-fuse
@@ -259,6 +262,7 @@ krunner
 kscreen
 kscreenlocker
 kservice
+ksysguard
 ksystemstats
 ktexteditor
 ktextwidgets
@@ -331,6 +335,7 @@ lib32-libunistring
 lib32-libunwind
 lib32-libva
 lib32-libva-intel-driver
+lib32-libva-mesa-driver
 lib32-libva-vdpau-driver
 lib32-libx11
 lib32-libxau
@@ -535,7 +540,9 @@ libusb
 libusbmuxd
 libutempter
 libva
-libva-intel-driver-hybrid
+libva-intel-driver
+libva-mesa-driver
+libva-vdpau-driver
 libvdpau
 libvdpau-va-gl
 libvirt
@@ -627,7 +634,6 @@ mokutil
 mpg123
 mpv
 mtdev
-mymc
 ncurses5-compat-libs
 ndctl
 neofetch
@@ -674,7 +680,6 @@ plasma-framework
 plasma-integration
 plasma-nm
 plasma-pa
-plasma-wayland-session
 plasma-workspace
 plymouth
 plymouth-theme-arch-logo-new
@@ -759,9 +764,10 @@ rpcs3-bin
 rsync
 rtmpdump
 run-parts
+samsung-ssd-dc-toolkit
 sbc
 schedtool
-scrcpy
+scrcpy-git
 sddm
 sddm-kcm
 sdl12-compat
