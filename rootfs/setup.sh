@@ -1,13 +1,17 @@
 #!/bin/sh
 
 for f in rootfs/boot/loader/entries/*.conf; do
-	sudo cp -v "${f}" "/boot/loader/entries/"
+    printf "\n:: Copying file ${f} to /boot/loader/entries/..."
+    cp "${f}" "/boot/loader/entries/"
+    [ $? = "0" ] && printf " done\n" || printf " failed\n"
 done
 
 lsblk && read -p ":: Where is the root partition mounted at? (e.g. /dev/sda1): " root_device
 if [ ! -z "${root_device}" ]; then
     for f in /boot/loader/entries/*.conf; do
+        printf "\n:: Setting up PARTUUID for ${root_device} on file ${f}..."
         sed "s/PARTUUID=<enter_partuuid_here>/PARTUUID=`blkid -s PARTUUID -o value ${root_device}`/g" -i "${f}"
+        [ $? = "0" ] && printf " done\n" || printf " failed\n"
     done
 else
     echo ":: ERROR: No root device was specified"
@@ -15,47 +19,51 @@ else
 fi
 
 for f in rootfs/etc/modprobe.d/*.conf; do
-    sudo cp -v "${f}" "/etc/modprobe.d/"
+    printf "\n:: Copying file ${f} to /etc/modprobe.d..."
+    cp "${f}" "/etc/modprobe.d/"
+    [ $? = "0" ] && printf " done\n" || printf " failed\n"
 done
 
 for f in rootfs/etc/pacman.d/*; do
+    printf "\n:: Populating pacman mirrorlist..."
     cat "${f}" | sudo tee "/etc/pacman.d/mirrorlist"
+    [ $? = "0" ] && printf " done\n" || printf " failed\n"
 done
 
+
 for f in rootfs/etc/profile.d/*.sh; do
-    sudo cp -v "${f}" "/etc/profile.d/"
+    printf "\n:: Copying file ${f} to /etc/profile.d/..."
+    cp "${f}" "/etc/profile.d/"
+    [ $? = "0" ] && printf " done\n" || printf " failed\n"
 done
 
 for f in rootfs/etc/sysctl.d/*.conf; do
-    sudo cp -v "${f}" "/etc/sysctl.d/"
+    printf "\n:: Copying file ${f} to /etc/sysctl.d/..."
+    cp -v "${f}" "/etc/sysctl.d/"
+    [ $? = "0" ] && printf " done\n" || printf " failed\n"
 done
 
-sudo cp -v "rootfs/etc/environment" "/etc/"
+printf "\n:: Copying file environment to /etc/..."
+cp -v "rootfs/etc/environment" "/etc/"
+[ $? = "0" ] && printf " done\n" || printf " failed\n"
 
-read -p "Type your username (e.g. foo): " username
+printf "\n:: Copying file rootfs/home/.config/modprobed.db to /home/${username}/.config/..."
+cp "rootfs/home/.config/modprobed.db" "/home/${username}/.config"
+[ $? = "0" ] && printf " done\n" || printf " failed\n"
 
-cp -v "rootfs/home/.config/modprobed.db" "/home/${username}/.config"
+echo
 
-[ ! -z "${username}" ] && chsh -s /bin/zsh "${username}" && \
-    [ ! -f "/home/${username}/.zshrc" ] && \
-    printf 'source /etc/profile
+curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
+
+if [ $? = "0" ]; then
+    echo "source /etc/profile
 source /etc/environment
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 autoload -Uz compinit
-compinit
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+compinit" | tee -a /home/${username}/.zshrc
+else
+    echo ":: ERROR: 'Oh My Zsh' installation failed"
 fi
-
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' > "/home/${username}/.zshrc" || \
-    echo "No username specified, zsh was not configured"
