@@ -1,10 +1,14 @@
 all: install-kernels
-	systemctl enable --now apparmor && \
-	systemctl enable --now firewalld && \
-	systemctl enable --now bluetooth && \
-	systemctl enable --now libvirtd.socket && \
-	systemctl enable --now libvirtd-ro.socket && \
-	systemctl enable --now libvirtd-admin.socket || exit 1
+	sudo systemctl enable --now apparmor && \
+	sudo systemctl enable --now firewalld && \
+	sudo systemctl enable --now bluetooth && \
+	sudo systemctl enable --now libvirtd.socket && \
+	sudo systemctl enable --now libvirtd-ro.socket && \
+	sudo systemctl enable --now libvirtd-admin.socket && \
+	sudo systemctl enable --now fancontrol.service && \
+	sudo systemctl enable --now systemd-boot-update.service && \
+	sudo systemctl enable sddm.service && \
+	sudo systemctl set-default graphical.target || exit 1
 
 install-kernels: setup-rootfs
 	[ -f "kernels/setup.sh" ] && sh "kernels/setup.sh"
