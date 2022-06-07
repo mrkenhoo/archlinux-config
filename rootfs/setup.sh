@@ -34,7 +34,7 @@ sudo cp -v "rootfs/etc/environment" "/etc/"
 
 read -p "Type your username (e.g. foo): " username
 
-cp -v "rootfs/home/${username}/.config/modprobed.db" "/home/${username}"
+cp -v "rootfs/home/.config/modprobed.db" "/home/${username}/.config"
 
 [ ! -z "${username}" ] && chsh -s /bin/zsh "${username}" && \
     [ ! -f "/home/${username}/.zshrc" ] && \
