@@ -47,6 +47,7 @@ bleachbit
 bluedevil
 bluez
 bluez-qt
+bluez-utils
 boost-libs
 botan
 box2d
@@ -67,7 +68,6 @@ chromaprint
 chromium
 cifs-utils
 clamtk
-cloudflare-warp-bin
 clucene
 cmatrix
 convertlit
@@ -78,7 +78,6 @@ dav1d
 dbus-glib
 dbus-python
 dconf
-deemix-gui-git
 desktop-file-utils
 dialog
 dmg2img
@@ -106,12 +105,12 @@ exiv2
 faac
 faad2
 fakeroot
+fancontrol-gui
 fancontrol-kcm
 faudio
 ffmpeg
 ffmpeg4.4
 firefox
-firestorm-bin
 firewalld
 flac
 flatbuffers
@@ -187,7 +186,6 @@ intel-gmmlib
 intel-media-driver
 intel-ucode
 iotop
-iptables
 iso-codes
 jasper
 java-environment-common
@@ -204,6 +202,7 @@ kactivities
 kactivities-stats
 kactivitymanagerd
 karchive
+kate
 kauth
 kbookmarks
 kcalendarcore
@@ -399,7 +398,6 @@ libb2
 libb64
 libblockdev
 libbluray
-libbpf
 libbs2b
 libbsd
 libburn
@@ -618,6 +616,7 @@ lzo
 m4
 mailcap
 make
+mangohud
 md4c
 mdadm
 media-player-info
@@ -640,6 +639,7 @@ neofetch
 neon
 networkmanager
 networkmanager-qt
+nextcloud-client
 nftables
 noto-fonts
 noto-fonts-emoji
@@ -680,6 +680,7 @@ plasma-framework
 plasma-integration
 plasma-nm
 plasma-pa
+plasma-wayland-session
 plasma-workspace
 plymouth
 plymouth-theme-arch-logo-new
@@ -922,5 +923,6 @@ zsh
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
+zstd-cmake
 zvbi
 zxing-cpp
