@@ -1,4 +1,4 @@
-all: install-kernels
+all: check install-kernels
 	sudo systemctl enable --now apparmor && \
 	sudo systemctl enable --now firewalld && \
 	sudo systemctl enable --now bluetooth && \
@@ -7,7 +7,7 @@ all: install-kernels
 	sudo systemctl enable --now libvirtd-admin.socket && \
 	sudo systemctl enable --now fancontrol.service && \
 	sudo systemctl enable --now systemd-boot-update.service && \
-	sudo systemctl enable sddm.service && \
+	sudo systemctl enable gdm.service && \
 	sudo systemctl set-default graphical.target || exit 1
 
 install-kernels: setup-rootfs
@@ -33,4 +33,7 @@ check:
 	[ -d "kernels" ] && echo "Directory kernels was found" && \
 	[ -d "packages" ] && echo "Directory packages was found" && \
 	[ -d "rootfs" ] && echo "Directory rootfs was found" && \
-	[ -d "tools" ] && echo "Directory tools was found" || exit 1
+	[ -d "tools" ] && echo "Directory tools was found" && \
+        [ "`whoami`" = "root" ] && \
+	echo ":: ERROR: Please use your own user instead of using root and try again" && \
+	    exit 1 || echo "Current user is not root"
