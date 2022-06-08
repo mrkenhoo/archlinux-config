@@ -47,13 +47,13 @@ printf "\n:: Copying file environment to /etc/..."
 cp -v "rootfs/etc/environment" "/etc/"
 [ $? = "0" ] && printf " done\n" || printf " failed\n"
 
-printf "\n:: Copying file rootfs/home/.config/modprobed.db to /home/${username}/.config/..."
-cp "rootfs/home/.config/modprobed.db" "/home/${username}/.config"
+printf "\n:: Copying file rootfs/home/.config/modprobed.db to ~/.config/..."
+cp "rootfs/home/.config/modprobed.db" "~/.config"
 [ $? = "0" ] && printf " done\n" || printf " failed\n"
 
-echo
-
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+sed 's/ZSH_THEME="."/ZSH_THEME="powerlevel10k/powerlevel10k"/g' -i ~/.zshrc
 
 if [ $? = "0" ]; then
     echo "source /etc/profile
