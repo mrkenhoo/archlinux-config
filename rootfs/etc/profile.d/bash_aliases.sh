@@ -23,6 +23,6 @@ alias fastboot='sudo fastboot'
 alias update-initramfs='sudo mkinitcpio -P -v'
 alias yay='[ `whoami` = "root" ] && echo "Do not run yay as root" || sudo -u $(whoami) yay'
 
-alias wake-up-xubuntu='[ ! -z "${mac_address}" ] && wol ${mac_address} || echo "No MAC address specified"'
+alias wake-up-system='[ ! -z "${mac_address}" ] && wol ${mac_address} || echo "No MAC address specified"'
 
-alias allow-unprivileged-userns-clone='[ `whoami` != "root" ] && echo "Please execute this script as root" || sysctl kernel.unprivileged_userns_clone=1'
+alias allow-unprivileged-userns-clone='sysctl kernel.unprivileged_userns_clone=1'
