@@ -8,13 +8,14 @@ all: check install-kernels
 	sudo systemctl enable --now fancontrol.service && \
 	sudo systemctl enable --now systemd-boot-update.service && \
 	sudo systemctl enable gdm.service && \
-	sudo systemctl set-default graphical.target || exit 1
+	sudo systemctl set-default graphical.target && \
+	sudo pwmconfig || exit 1
 
 install-kernels: setup-rootfs
 	[ -f "kernels/setup.sh" ] && sh "kernels/setup.sh"
 
 setup-rootfs: install-packages
-	[ -f "rootfs/setup.sh" ] && sudo sh "rootfs/setup.sh"
+	[ -f "rootfs/setup.sh" ] && sh "rootfs/setup.sh"
 
 install-packages: install-arch
 	[ -f "packages/setup.sh" ] && sh "packages/setup.sh"
@@ -35,5 +36,5 @@ check:
 	[ -d "rootfs" ] && echo "Directory rootfs was found" && \
 	[ -d "tools" ] && echo "Directory tools was found" && \
         [ "`whoami`" = "root" ] && \
-	echo ":: ERROR: Please use your own user instead of using root and try again" && \
-	    exit 1 || echo "Current user is not root"
+	        echo ":: ERROR: Please use your own user instead of using root and try again" && \
+	        exit 1 || echo "Current user is not root"
