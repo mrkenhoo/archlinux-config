@@ -36,7 +36,6 @@ ayatana-ido
 base
 bash-completion
 bc
-bchunk
 bison
 bitwarden
 bleachbit
@@ -549,7 +548,6 @@ lzo
 m4
 mailcap
 make
-mangohud
 md4c
 mdadm
 media-player-info
@@ -564,6 +562,7 @@ mokutil
 mpg123
 mpv
 mtdev
+mutter-dynamic-buffering
 nautilus
 ncurses5-compat-libs
 ndctl
@@ -584,7 +583,6 @@ openjpeg2
 openssh
 opus
 orc
-orchis-theme
 osinfo-db
 ostree
 p7zip
