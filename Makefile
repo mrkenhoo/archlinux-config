@@ -7,6 +7,9 @@ all: check install-kernels
 	sudo systemctl enable --now libvirtd-admin.socket && \
 	sudo systemctl enable --now fancontrol.service && \
 	sudo systemctl enable --now systemd-boot-update.service && \
+	sudo systemctl enable --now docker.socket && \
+	sudo systemctl enable --now cronie && \
+	sudo systemctl enable --now fstrim.timer && \
 	sudo systemctl enable gdm.service && \
 	sudo systemctl set-default graphical.target && \
 	sudo pwmconfig || exit 1
