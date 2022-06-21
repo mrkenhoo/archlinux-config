@@ -21,6 +21,11 @@ setup-rootfs: install-packages
 	[ -f "rootfs/setup.sh" ] && sh "rootfs/setup.sh"
 
 install-packages: install-arch
+	git submodule init && \
+	git config submodule.https://github.com/p-mng/proton-ge-custom-updater.git \
+		packages/proton-ge-custom-updater && \
+	git submodule update && \
+	sh tools/archfi/archfi
 	[ -f "packages/setup.sh" ] && sh "packages/setup.sh"
 
 install-arch:
