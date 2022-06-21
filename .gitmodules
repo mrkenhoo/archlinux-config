@@ -4,3 +4,6 @@
 [submodule "packages/proton-ge-custom-updater"]
 	path = packages/proton-ge-custom-updater
 	url = https://github.com/p-mng/proton-ge-custom-updater.git
+[submodule "packages/yay"]
+	path = packages/yay
+	url = https://aur.archlinux.org/yay.git
