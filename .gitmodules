@@ -7,3 +7,6 @@
 [submodule "packages/yay"]
 	path = packages/yay
 	url = https://aur.archlinux.org/yay.git
+[submodule "tools/linux-utils"]
+	path = tools/linux-utils
+	url = https://github.com/mrkenhoo/linux-utils
