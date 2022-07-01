@@ -57,7 +57,7 @@ done
 
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-sed 's/ZSH_THEME="."/ZSH_THEME="powerlevel10k/powerlevel10k"/g' -i "/home/`whoami`/.zshrc"
+sed 's,ZSH_THEME=".",ZSH_THEME="powerlevel10k/powerlevel10k",g' -i "/home/`whoami`/.zshrc"
 
 if [ $? = "0" ]; then
     [ -f "/home/`whoami`/.zshrc" ] && echo "source /etc/profile
