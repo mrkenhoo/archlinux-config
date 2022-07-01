@@ -129,6 +129,8 @@ nft_reject
 nft_reject_inet
 nls_utf8
 ntfs3
+nvme
+nvme_core
 overlay
 pcspkr
 platform_profile
