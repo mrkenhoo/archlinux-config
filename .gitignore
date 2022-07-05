@@ -2,5 +2,5 @@ kernels/linux-tkg
 packages/yay
 packages/proton-ge-custom-updater/*
 !packages/proton-ge-custom-updater/PKGBUILD
-tools/linux-utils
-tools/archfi
+tools/linux-utils/*
+!tools/linux-utils/archlinux-sbct
