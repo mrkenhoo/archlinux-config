@@ -17,7 +17,7 @@ else
         echo ":: ERROR: Could not find the file kernels/linux-tkg/update-kernel-versions.sh"
         exit 1
     else
-        cd "kernels/linux-tkg" && sh update-kernel-versions.sh && cd ../..
+        cd "kernels/linux-tkg" && sh update-kernel-versions.sh && makepkg -cisr && cd ../..
     fi
 fi
 
